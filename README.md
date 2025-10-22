@@ -4,11 +4,18 @@ Bu proje, bir Bilgi Erişim (Retrieval-Augmented Generation - RAG) mimarisinin P
 
 ## 🎯 Proje Amacı
 
-Temel amaç, Büyük Dil Modellerinin (LLM) bilgiye dayalı, kontrol edilebilir ve doğrulanabilir yanıtlar üretme yeteneğini sergilemektir. Bu demo, önceden yüklenmiş bir JSON veri seti (`travel_routes.json`) üzerinden çalışmaktadır.
+Bu projenin temel amacı, Büyük Dil Modellerinin (LLM) bilgiye dayalı, **kontrollü ve doğrulanabilir** yanıtlar üretme yeteneğini sergilemektir.
 
-**Öne Çıkan Özellikler:**
-1.  **Semantik Arama (RAG):** Kullanıcı sorusunun anlamını vektörlere dönüştürerek en alakalı bilgiyi bulma.
-2.  **Dinamik Rota Oluşturma:** LLM'den alınan planları, yerlerin coğrafi koordinatlarına göre en yakın komşu mantığıyla optimize edilmiş sıraya koyma.
+**Neden Seyahat Asistanı?**
+
+Seyahat etmek benim için büyük bir tutku. Ancak yurt dışına çıktığımda, **etkili ve zaman/maliyet açısından optimize edilmiş seyahat rotaları** oluşturmanın ne kadar zor olduğunu bizzat deneyimledim. Farklı yerleri tek tek araştırmak, en yakın komşuluk mantığıyla sıralamak ve tüm bu bilgiyi tek bir akıcı planda birleştirmek **büyük bir zaman ve çaba gerektiriyor.**
+
+Bu chatbot, tam da bu zorluğu aşmak için tasarlandı:
+
+1.  **Semantik Arama (RAG):** Kullanıcı sorusunun anlamını vektörlere dönüştürerek, önceden yüklenmiş kapsamlı veri setimizden (`travel_routes.json`) en alakalı bilgiyi anında bulma.
+2.  **Dinamik ve Optimize Rota Oluşturma:** LLM'den alınan planları, yerlerin coğrafi koordinatlarına göre **en yakın komşu mantığıyla optimize edilmiş sıraya** koyarak, kullanıcıya pratik ve zahmetsiz bir rota sunma.
+
+Bu sayede, karmaşık araştırma süreçlerini otomatize ederek seyahatlerin keyfini çıkarmaya daha fazla odaklanmanızı sağlıyoruz.
 
 ## 🛠️ Kurulum ve Çalıştırma Talimatları
 
