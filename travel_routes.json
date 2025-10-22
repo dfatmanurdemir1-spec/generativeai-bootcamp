@@ -1,0 +1,356 @@
+{
+  "Paris": {
+    "Days": {
+      "1": ["Eiffel Kulesi", "Trocadéro Bahçeleri", "Seine Nehri Turu"],
+      "2": ["Louvre Müzesi", "Notre Dame Katedrali", "Montmartre"],
+      "3": ["Champs-Élysées", "Arc de Triomphe", "Luxembourg Bahçeleri"]
+    },
+    "Culture": ["Louvre Müzesi", "Notre Dame Katedrali", "Montmartre", "Arc de Triomphe"],
+    "Nature": ["Trocadéro Bahçeleri", "Seine Nehri Turu", "Luxembourg Bahçeleri"],
+    "Shopping": ["Champs-Élysées", "Le Marais"],
+    "Food": ["Montmartre Kafeleri", "Latin Mahallesi"],
+    "Places": {
+      "Eiffel Kulesi": {
+        "description": "Paris’in simgesi olan 324 metre yüksekliğindeki demir kule, 1889 Dünya Fuarı için inşa edilmiştir.",
+        "tips": "Biletinizi online alın ve gün batımı veya gece manzarası için ziyaret edin.",
+        "image": "images/paris/eiffel.jpg",
+        "latitude": 48.8584,
+        "longitude": 2.2945
+      },
+      "Louvre Müzesi": {
+        "description": "Dünyanın en büyük ve en çok ziyaret edilen sanat müzesi. Mona Lisa ve Venus de Milo gibi eserlere ev sahipliği yapar.",
+        "tips": "Çok büyük olduğu için görmek istediklerinizi önceden planlayın. Salı günleri kapalıdır.",
+        "image": "images/paris/louvre.jpg",
+        "latitude": 48.8606,
+        "longitude": 2.3376
+      },
+      "Notre Dame Katedrali": {
+        "description": "Gotik mimarinin başyapıtlarından biri olan tarihi katedral. Yangın sonrası restorasyondadır.",
+        "tips": "Dış cephesini ve çevresini gezebilirsiniz. Restorasyon durumunu kontrol edin.",
+        "image": "images/paris/notre_dame.jpg",
+        "latitude": 48.853,
+        "longitude": 2.3499
+      },
+      "Montmartre": {
+        "description": "Sanatçıları, Sacré-Cœur Bazilikası ve bohem atmosferiyle ünlü tepe.",
+        "tips": "Ressamlar Tepesi'ni (Place du Tertre) ziyaret edin ve dar sokaklarda kaybolun.",
+        "image": "images/paris/montmartre.jpg",
+        "latitude": 48.8867,
+        "longitude": 2.3431
+      }
+    }
+  },
+  "Tokyo": {
+    "Days": {
+      "1": ["Shibuya Crossing", "Hachiko Heykeli", "Meiji Tapınağı"],
+      "2": ["Senso-ji Tapınağı", "Asakusa Sokakları", "Ueno Parkı"],
+      "3": ["Tokyo Kulesi", "Odaiba", "Akihabara"]
+    },
+    "Culture": ["Meiji Tapınağı", "Senso-ji Tapınağı", "Asakusa Sokakları"],
+    "Nature": ["Ueno Parkı", "Shinjuku Gyoen Ulusal Bahçesi"],
+    "Shopping": ["Shibuya", "Akihabara", "Ginza"],
+    "Food": ["Tsukiji Dış Pazarı", "Ramen Sokakları", "Depachika"],
+    "Places": {
+      "Shibuya Crossing": {
+        "description": "Dünyanın en kalabalık yaya geçidi. Tokyo'nun enerjisini hissetmek için ikonik bir nokta.",
+        "tips": "Starbucks veya çevredeki binaların üst katlarından geçişi izlemek popülerdir.",
+        "image": "images/tokyo/shibuya.jpg",
+        "latitude": 35.6595,
+        "longitude": 139.7005
+      },
+      "Meiji Tapınağı": {
+        "description": "İmparator Meiji ve İmparatoriçe Shoken'e adanmış, yemyeşil bir ormanın içinde yer alan huzurlu Şinto tapınağı.",
+        "tips": "Gürültülü şehirden kaçmak ve doğayla iç içe olmak için harika bir yer.",
+        "image": "images/tokyo/meiji.jpg",
+        "latitude": 35.6764,
+        "longitude": 139.6993
+      },
+      "Senso-ji Tapınağı": {
+        "description": "Tokyo'nun en eski Budist tapınağı. Kaminarimon Kapısı ve Nakamise-dori alışveriş caddesiyle ünlüdür.",
+        "tips": "Nakamise-dori'de geleneksel atıştırmalıkları ve hediyelik eşyaları bulabilirsiniz.",
+        "image": "images/tokyo/sensoji.jpg",
+        "latitude": 35.7148,
+        "longitude": 139.7967
+      }
+    }
+  },
+  "İstanbul": {
+    "Days": {
+      "1": ["Ayasofya", "Topkapı Sarayı"],
+      "2": ["Galata Kulesi", "Kapalıçarşı"],
+      "3": ["Bosphorus Turu", "Ortaköy", "Mısır Çarşısı"]
+    },
+    "Culture": ["Ayasofya", "Topkapı Sarayı", "Galata Kulesi"],
+    "Nature": ["Bosphorus Turu", "Pierre Loti Tepesi", "Gülhane Parkı"],
+    "Shopping": ["Kapalıçarşı", "Mısır Çarşısı", "İstiklal Caddesi"],
+    "Food": ["Ortaköy Kumpir/Waffle", "Eminönü Balık-Ekmek", "Sultanahmet Köftecisi", "Karaköy Güllüoğlu Baklava"],
+    "Places": {
+      "Ayasofya": {
+        "description": "Bizans mimarisinin başyapıtı, tarihi kilise, müze ve şimdi cami.",
+        "tips": "Biletleri online almak sıra beklemeyi azaltır. Ziyaret saatlerini kontrol edin.",
+        "image": "images/istanbul/ayasofya.jpg",
+        "latitude": 41.0086,
+        "longitude": 28.9802
+      },
+      "Topkapı Sarayı": {
+        "description": "Osmanlı İmparatorluğu'nun yönetim merkezi ve padişahların ikametgahı olan saray kompleksi.",
+        "tips": "Harem bölümü için ayrı bilet gerekebilir. Tümünü gezmek için birkaç saat ayırın.",
+        "image": "images/istanbul/topkapi.jpg",
+        "latitude": 41.0115,
+        "longitude": 28.9834
+      },
+      "Kapalıçarşı": {
+        "description": "Dünyanın en eski ve en büyük kapalı çarşılarından biri. Labirent gibi sokaklarında binlerce dükkan bulunur.",
+        "tips": "Pazarlık yapmaya hazırlıklı olun. Kaybolmak eğlencenin bir parçası!",
+        "image": "images/istanbul/kapalicarsi.jpg",
+        "latitude": 41.0106,
+        "longitude": 28.968
+      },
+      "Galata Kulesi": {
+        "description": "İstanbul'un panoramik manzarasını sunan tarihi Ceneviz kulesi.",
+        "tips": "Manzara için gün batımına yakın çıkmak güzel olabilir ancak sıra uzun olabilir.",
+        "image": "images/istanbul/galata.jpg",
+        "latitude": 41.0257,
+        "longitude": 28.9744
+      }
+    }
+  },
+  "New York": {
+    "Days": {
+      "1": ["Times Square"],
+      "2": ["Central Park"],
+      "3": ["Statue of Liberty & Ellis Island"]
+    },
+    "Culture": ["Metropolitan Museum of Art", "MoMA", "Broadway Showları", "Statue of Liberty & Ellis Island"],
+    "Nature": ["Central Park", "Brooklyn Bridge Park", "High Line"],
+    "Shopping": ["5th Avenue", "SoHo", "Times Square Mağazaları"],
+    "Food": ["New York Pizza Dilimi", "Bagel", "Hot Dog", "Cheesecake"],
+    "Places": {
+      "Times Square": {
+        "description": "Devasa reklam panoları, kalabalığı ve enerjisiyle ünlü ikonik kavşak.",
+        "tips": "Geceleri daha etkileyicidir. Kalabalığa hazırlıklı olun.",
+        "image": "images/newyork/times_square.jpg",
+        "latitude": 40.758,
+        "longitude": -73.9855
+      },
+      "Central Park": {
+        "description": "Manhattan'ın ortasında yer alan devasa halk parkı. Yürüyüş, bisiklet, piknik için ideal.",
+        "tips": "Strawberry Fields ve Bethesda Terrace görülmeye değer.",
+        "image": "images/newyork/central_park.jpg",
+        "latitude": 40.7851,
+        "longitude": -73.9683
+      },
+      "Statue of Liberty & Ellis Island": {
+        "description": "Özgürlük Heykeli ve Amerika'ya göçün tarihi kapısı Ellis Adası'nı ziyaret.",
+        "tips": "Feribot biletlerini önceden ayırtın.",
+        "image": "images/newyork/statue_of_liberty.jpg",
+        "latitude": 40.6892,
+        "longitude": -74.0445
+      }
+    }
+  },
+  "Roma": {
+    "Days": {
+      "1": ["Kolezyum", "Roma Forumu", "Palatino Tepesi"],
+      "2": ["Pantheon", "Piazza Navona", "Trevi Çeşmesi"],
+      "3": ["Vatikan Müzeleri & Sistina Şapeli", "Aziz Petrus Bazilikası", "Castel Sant'Angelo"]
+    },
+    "Culture": ["Kolezyum", "Roma Forumu", "Pantheon", "Vatikan Müzeleri", "Sistina Şapeli"],
+    "Nature": ["Borghese Bahçeleri", "Tiber Nehri kenarı"],
+    "Shopping": ["Via del Corso", "Via Condotti"],
+    "Food": ["Pizza al Taglio", "Pasta", "Gelato", "Espresso"],
+    "Places": {
+      "Kolezyum": {
+        "description": "Antik Roma'nın en büyük amfitiyatrosu.",
+        "tips": "Biletinizi online alın.",
+        "image": "images/rome/colosseum.jpg",
+        "latitude": 41.8902,
+        "longitude": 12.4922
+      },
+      "Trevi Çeşmesi": {
+        "description": "Dünyanın en ünlü çeşmelerinden biri.",
+        "tips": "Omzunun üzerinden bozuk para at!",
+        "image": "images/rome/trevi.jpg",
+        "latitude": 41.9009,
+        "longitude": 12.4833
+      },
+      "Vatikan Müzeleri": {
+        "description": "Papalık koleksiyonlarını barındıran devasa müzeler kompleksi.",
+        "tips": "Biletleri önceden ayırın.",
+        "image": "images/rome/vatican.jpg",
+        "latitude": 41.9065,
+        "longitude": 12.4536
+      }
+    }
+  },
+  "Barselona": {
+    "Days": {
+      "1": ["La Sagrada Familia", "Park Güell", "Casa Batlló & Casa Milà"],
+      "2": ["La Rambla", "Barri Gòtic", "Boqueria Market"],
+      "3": ["Montjuïc Tepesi", "Magic Fountain", "Barceloneta Plajı"]
+    },
+    "Culture": ["La Sagrada Familia", "Park Güell", "Casa Batlló", "Barri Gòtic", "Picasso Müzesi"],
+    "Nature": ["Park Güell", "Montjuïc Tepesi", "Barceloneta Plajı", "Ciutadella Parkı"],
+    "Shopping": ["La Rambla", "Passeig de Gràcia", "El Born"],
+    "Food": ["Tapas", "Paella", "Sangria", "Crema Catalana"],
+    "Places": {
+      "La Sagrada Familia": {
+        "description": "Gaudí'nin başyapıtı olan etkileyici bazilika.",
+        "tips": "Online bilet şarttır.",
+        "image": "images/barselona/sagrada_familia.jpg",
+        "latitude": 41.4036,
+        "longitude": 2.1744
+      },
+      "Park Güell": {
+        "description": "Gaudí'nin tasarladığı mozaikli halk parkı.",
+        "tips": "Gün batımı manzarası harikadır.",
+        "image": "images/barselona/park_guell.jpg",
+        "latitude": 41.4145,
+        "longitude": 2.1527
+      },
+      "La Rambla": {
+        "description": "Barselona'nın en ünlü caddesi.",
+        "tips": "Kalabalıkta dikkatli olun.",
+        "image": "images/barselona/la_rambla.jpg",
+        "latitude": 41.3818,
+        "longitude": 2.173
+      }
+    }
+  },
+  "Moskova": {
+    "Days": {
+      "1": ["Kızıl Meydan", "Aziz Vasili Katedrali", "Kremlin & Armory Chamber"],
+      "2": ["Bolşoy Tiyatrosu", "GUM Alışveriş Merkezi", "Tretyakov Devlet Galerisi"],
+      "3": ["Moscow City", "Arbat Caddesi", "Moskova Metrosu"]
+    },
+    "Culture": ["Kızıl Meydan", "Aziz Vasili Katedrali", "Kremlin", "Bolşoy Tiyatrosu"],
+    "Nature": ["Gorky Park", "Alexander Bahçesi"],
+    "Shopping": ["GUM", "Arbat Caddesi"],
+    "Food": ["Borscht", "Pelmeni", "Blini", "Stroganoff"],
+    "Places": {
+      "Kızıl Meydan": {
+        "description": "Moskova'nın kalbi sayılan tarihi meydan.",
+        "tips": "Farklı saatlerde ziyaret edin.",
+        "image": "images/moscow/red_square.jpg",
+        "latitude": 55.7541,
+        "longitude": 37.6208
+      },
+      "Aziz Vasili Katedrali": {
+        "description": "Renkli kubbeleriyle ünlü katedral.",
+        "tips": "İçini gezmek harika bir deneyimdir.",
+        "image": "images/moscow/st_basil.jpg",
+        "latitude": 55.7526,
+        "longitude": 37.6231
+      },
+      "Kremlin": {
+        "description": "Rusya'nın yönetim merkezi olan tarihi kompleks.",
+        "tips": "Armory Chamber bileti önceden alın.",
+        "image": "images/moscow/kremlin.jpg",
+        "latitude": 55.7514,
+        "longitude": 37.6175
+        }
+    }
+  },
+  "Berlin": {
+    "Days": {
+      "1": ["Brandenburg Kapısı", "Reichstag Binası", "Holokost Anıtı"],
+      "2": ["Berlin Duvarı Anıtı", "East Side Gallery", "Museum Island"],
+      "3": ["Charlottenburg Sarayı", "Tiergarten", "Potsdamer Platz"]
+    },
+    "Culture": ["Reichstag Binası", "Museum Island", "Berlin Duvarı Anıtı"],
+    "Nature": ["Tiergarten", "Spree Nehri", "Charlottenburg Bahçesi"],
+    "Shopping": ["Kurfürstendamm", "Alexanderplatz"],
+    "Food": ["Currywurst", "Berliner", "Doner Kebap"],
+    "Places": {
+      "Brandenburg Kapısı": {
+        "description": "Berlin’in simgesi olan neoklasik anıt kapı.",
+        "tips": "Geceleri aydınlatmasıyla etkileyicidir.",
+        "image": "images/berlin/brandenburg.jpg",
+        "latitude": 52.5163,
+        "longitude": 13.3777
+      },
+      "Berlin Duvarı Anıtı": {
+        "description": "Soğuk Savaş döneminden kalan duvar kalıntılarının sergilendiği açık hava anıtı.",
+        "tips": "East Side Gallery'de grafitileri mutlaka görün.",
+        "image": "images/berlin/berlin_wall.jpg",
+        "latitude": 52.5351,
+        "longitude": 13.3903
+      },
+      "Reichstag Binası": {
+        "description": "Alman parlamentosuna ev sahipliği yapan tarihi bina.",
+        "tips": "Cam kubbeye çıkmak için önceden rezervasyon yapın.",
+        "image": "images/berlin/reichstag.jpg",
+        "latitude": 52.5186,
+        "longitude": 13.3762
+      }
+    }
+  },
+  "Londra": {
+    "Days": {
+      "1": ["Big Ben", "Westminster Abbey", "London Eye"],
+      "2": ["British Museum", "Trafalgar Square", "Covent Garden"],
+      "3": ["Tower of London", "Tower Bridge", "Camden Town"]
+    },
+    "Culture": ["British Museum", "Tower of London", "Westminster Abbey"],
+    "Nature": ["Hyde Park", "Regent's Park", "St James’s Park"],
+    "Shopping": ["Oxford Street", "Camden Market", "Covent Garden"],
+    "Food": ["Fish and Chips", "English Breakfast", "Afternoon Tea"],
+    "Places": {
+      "Big Ben": {
+        "description": "İngiltere’nin sembolü haline gelmiş ünlü saat kulesi.",
+        "tips": "En iyi fotoğraf Westminster Köprüsü'nden çekilir.",
+        "image": "images/london/bigben.jpg",
+        "latitude": 51.5007,
+        "longitude": -0.1246
+      },
+      "Tower of London": {
+        "description": "İngiltere’nin tarihi kalesi ve mücevherlerinin sergilendiği yer.",
+        "tips": "Kraliyet mücevherlerini görmek için erken gidin.",
+        "image": "images/london/tower.jpg",
+        "latitude": 51.5081,
+        "longitude": -0.0759
+      },
+      "London Eye": {
+        "description": "Thames Nehri kıyısında dev dönme dolap, Londra’nın panoramik manzarasını sunar.",
+        "tips": "Gün batımında biniş önerilir.",
+        "image": "images/london/londoneye.jpg",
+        "latitude": 51.5033,
+        "longitude": -0.1195
+      }
+    }
+  },
+  "Dubai": {
+    "Days": {
+      "1": ["Burj Khalifa", "Dubai Mall", "Dubai Fountain"],
+      "2": ["Palm Jumeirah", "Atlantis The Palm", "Jumeirah Beach"],
+      "3": ["Old Dubai", "Dubai Creek", "Desert Safari"]
+    },
+    "Culture": ["Old Dubai", "Dubai Museum", "Al Fahidi Historical District"],
+    "Nature": ["Jumeirah Beach", "Desert Safari"],
+    "Shopping": ["Dubai Mall", "Mall of the Emirates", "Souk Madinat"],
+    "Food": ["Shawarma", "Luqaimat", "Camel Burger", "Hummus"],
+    "Places": {
+      "Burj Khalifa": {
+        "description": "Dünyanın en yüksek binası. 828 metre uzunluğundaki bu gökdelen Dubai’nin simgesidir.",
+        "tips": "124. ve 148. kat gözlem teraslarına çıkabilirsiniz.",
+        "image": "images/dubai/burj_khalifa.jpg",
+        "latitude": 25.1972,
+        "longitude": 55.2744
+      },
+      "Dubai Mall": {
+        "description": "Dünyanın en büyük alışveriş merkezlerinden biri, 1200'den fazla mağaza ve akvaryum içerir.",
+        "tips": "Akşam saatlerinde su gösterisini izlemeyi unutmayın.",
+        "image": "images/dubai/dubai_mall.jpg",
+        "latitude": 25.1985,
+        "longitude": 55.2796
+      },
+      "Desert Safari": {
+        "description": "Arap çölünde jeep safari, deve turu ve geleneksel eğlencelerle dolu bir deneyim.",
+        "tips": "Güneş gözlüğü ve su bulundurun.",
+        "image": "images/dubai/desert_safari.jpg",
+        "latitude": 24.9535,
+        "longitude": 55.3756
+      }
+    }
+  }
+}

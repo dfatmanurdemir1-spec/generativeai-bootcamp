@@ -1,0 +1,11 @@
+# Python Sanal Ortamları
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Gizli API Anahtarları (HAYATİ ÖNEMDE)
+.env 
+
+# Gradio/ChromaDB Geçici Verileri
+vector_db_gradio_final/
