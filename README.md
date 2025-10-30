@@ -1,8 +1,54 @@
 # 🗺️ Gelişmiş RAG Tabanlı Seyahat Asistanı (Gemini & ChromaDB)
 
-Bu proje, bir Bilgi Erişim (Retrieval-Augmented Generation - RAG) mimarisinin Python ve Gradio kullanılarak nasıl uygulanabileceğini göstermektedir.
+Bu proje, Akbank GenAI Bootcamp'i için geliştirilmiş, coğrafi rota optimizasyonu özelliğine sahip, gelişmiş bir RAG (Retrieval-Augmented Generation) tabanlı seyahat asistanıdır.
 
-## 🎯 Proje Amacı
+## 🚀 Canlı Demo (Hugging Face)
+
+Uygulamanın canlı çalışan versiyonuna aşağıdaki linkten ulaşabilirsiniz.
+
+**[➡️ Buraya Tıklayarak Canlı Demoyu Deneyin](https://huggingface.co/spaces/fatmanurdemir/Chatbot-Travel_Assistant)**
+
+*(Henüz deploy etmediyseniz, deploy ettikten sonra .hf.space ile biten linki buraya yapıştırın)*
+
+---
+
+## 🖥️ Örnek Kullanım & Product Kılavuzu
+
+Uğurcan Bey'in geribildirimi doğrultusunda, uygulamanın temel özelliklerini gösteren bazı kullanım örnekleri aşağıdadır.
+
+### 1. Rota Sorgusu ve Coğrafi Optimizasyon
+
+Kullanıcı bir şehir için rota istediğinde, asistan önce LLM (Gemini) kullanarak bir plan oluşturur. Ardından, bu plandaki yerleri `travel_routes.json` dosyasındaki koordinatlara göre **en yakın komşu mantığıyla (coğrafi olarak) yeniden sıralayarak** kullanıcıya optimize edilmiş bir rota sunar.
+
+![Örnek Rota Sorgusu](images/ornek_sorgu.png)
+*Görsel 1: Kullanıcının rota sorgusu.*
+
+![Optimize Edilmiş Rota Çıktısı](images/optimize_cikti.png)
+*Görsel 2: Asistanın ürettiği optimize edilmiş rota çıktısı.*
+
+### 2. Spesifik Bilgi Sorgusu (RAG)
+
+Kullanıcı "Eiffel Kulesi için ipucu var mı?" gibi spesifik bir soru sorduğunda, RAG mimarisi devreye girer. Asistan, ChromaDB vektör veritabanından sadece ilgili bilgiyi (context) bularak cevap üretir.
+
+![Örnek Bilgi Sorgusu](images/bilgi_sorgu.png)
+*Görsel 3: RAG ile spesifik bilgi sorgulama.*
+
+---
+
+## 🛠️ Teknik Altyapı ve Mimari
+
+Proje, Uğurcan Bey'in de belirttiği gibi, **LangChain kullanılmadan** manuel bir RAG pipeline'ı implemente edilerek oluşturulmuştur:
+
+* **Dil Modeli (LLM):** `gemini-2.5-flash`
+* **Embedding Modeli:** `sentence-transformers/all-MiniLM-L6-v2`
+* **Vektör Veritabanı:** `ChromaDB` (Yerel persistent storage)
+* **Arayüz (UI):** `Gradio`
+* **Hosting (Deployment):** `Hugging Face Spaces`
+* **Özgün Özellik:** `generate_and_order_route` fonksiyonu ile en yakın komşu mantığına dayalı coğrafi rota optimizasyonu.
+
+---
+
+## 🎯 Proje Amacı (Orijinal Açıklama)
 
 Bu projenin temel amacı, Büyük Dil Modellerinin (LLM) bilgiye dayalı, **kontrollü ve doğrulanabilir** yanıtlar üretme yeteneğini sergilemektir.
 
@@ -17,21 +63,21 @@ Bu chatbot, tam da bu zorluğu aşmak için tasarlandı:
 
 Bu sayede, karmaşık araştırma süreçlerini otomatize ederek seyahatlerin keyfini çıkarmaya daha fazla odaklanmanızı sağlıyoruz.
 
-## 🛠️ Kurulum ve Çalıştırma Talimatları
+---
 
-Projeyi çalıştırmak için gerekli adımlar aşağıdadır. Bu adımlar, Akbank ekibinin projeyi kolayca ayağa kaldırması için tasarlanmıştır.
+## ⚙️ Yerel (Lokal) Kurulum Talimatları
+
+Proje, Hugging Face Spaces üzerinden canlı olarak erişilebilir durumdadır. Ancak, kendi bilgisayarınızda (lokal) çalıştırmak isterseniz aşağıdaki adımları izleyebilirsiniz.
 
 ### 1. Ön Koşullar
 * Python 3.x
-* Git (GitHub'a yükleme için gereklidir)
+* Git
 
 ### 2. Ortam Hazırlığı
-1.  Proje dosyalarını indirin/klonlayın.
+1.  Proje dosyalarını klonlayın: `git clone [BURAYA_GITHUB_LINKINIZI_EKLEYIN]`
 2.  Komut Satırında (Terminal) proje ana dizinine gidin.
-3.  Sanal Ortam Oluşturun (Opsiyonel ama önerilir): `python -m venv venv`
+3.  Sanal Ortam Oluşturun (Önerilir): `python -m venv venv`
 4.  Sanal Ortamı Aktif Edin: (Windows'ta: `.\venv\Scripts\activate` / MacOS/Linux'ta: `source venv/bin/activate`)
 
-### 3. Bağımlılıkları Yükleme
-Kurulması gereken kütüphaneler `requirements.txt` dosyasında listelenmiştir.
-```bash
-pip install -r requirements.txt
+### 3. API Anahtarının Tanımlanması
+Proje ana dizininde `.env` adında bir dosya oluşturun ve içine Google Gemini API anahtarınızı ekleyin:
