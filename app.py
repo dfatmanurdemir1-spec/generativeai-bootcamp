@@ -14,7 +14,7 @@ import chromadb
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") 
 DATA_FILE = "travel_routes.json"
-VECTOR_DB_PATH = "vector_db_gradio_final" # DB Klasör adı
+VECTOR_DB_PATH = "/tmp/vector_db_gradio_final" # DB Klasör adı (Hugging Face için /tmp klasörü)
 embedding_model_name = "sentence-transformers/all-MiniLM-L6-v2"
 
 # --- Hata Kontrolü: API Anahtarı ---
@@ -287,16 +287,6 @@ def ask_travel_bot(user_question, user_location=None):
             except:
                 print("🚨 Konum formatı hatalı. Koordinat filtresi uygulanmayacak.")
         
-        # Şehir tespiti (Konum filtrelemesi yapılıyorsa)
-        if user_location:
-            city_results = vector_collection.query(
-                query_embeddings=[embeddings_model.encode([user_question])[0].tolist()],
-                n_results=1,
-                where={"type": "Genel Plan"}
-            )
-            if city_results['metadatas'][0] and city_results['metadatas'][0][0]['source_city']:
-                 city_to_check = city_results['metadatas'][0][0]['source_city']
-                 print(f"📍 Şehir Tespiti Başarılı: {city_to_check}")
             
         # 2. Soruyu Vektöre Çevir (Filtre varsa tekrar yapmamak için yukarı taşıdık)
         query_vector = embeddings_model.encode([user_question])[0].tolist()
@@ -324,9 +314,18 @@ def ask_travel_bot(user_question, user_location=None):
         # 4. Bağlamı (Context) Oluştur
         context = "\n\n---\n\n".join(results['documents'][0]) if results['documents'] else "Bilgi bulunamadı."
         print(f"📚 Bulunan Bağlam (Context): {context[:200]}...")
+        # --- YENİ ŞEHİR TESPİTİ (RAG SONUÇLARINDAN) ---
+        # Rota optimizasyonu için 'city_to_check' değişkenini burada dolduruyoruz.
+        if results['metadatas'] and results['metadatas'][0]:
+            # Bulunan ilk dokümanın metadatasından şehri al
+            metadata_found = results['metadatas'][0][0] 
+            if 'source_city' in metadata_found:
+                city_to_check = metadata_found['source_city']
+                print(f"📍 RAG ile Şehir Tespiti Başarılı: {city_to_check}")
+        # --- YENİ ŞEHİR TESPİTİ BİTTİ ---
 
         # 5. Prompt Hazırlığı
-        current_city = city_to_check if city_to_check else "belirtilen şehir"
+        current_city = city_to_check if city_to_check else "ilgili şehir"
         
         if "günlük gezi planı oluştur" in user_question.lower() or "rota oluştur" in user_question.lower():
             is_route_request = True
